@@ -19,9 +19,9 @@ spring:
     password: cos1234
     
   jpa:
-    open-in-view: true
+    open-in-view: true  # view 단 까지 세션을 오픈해둔다는 뜻. fetch.lazy 전략 가능. (세션 종료 - 기존: service -> 변경: controller)
     hibernate:
-      ddl-auto: update
+      ddl-auto: create #create, update, none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
@@ -36,5 +36,5 @@ spring:
       name: test
       password: 1234   
 
-#file:
-#  path: C:/workspace/springbootwork/upload/
+file:
+  path: D:/workspace/springbootwork/upload/
